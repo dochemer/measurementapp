@@ -1,7 +1,59 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <script src="calc.js"></script>
+    </head>
     <body>
-        <p>Hello how are you</p>
-        <p>Another paragraph</p>
-        <p>What's this</p>
+        <h1>Calculator</h1>
+
+        <form>
+            <table>
+            <tr>
+                <td><label for="shape">Shape:</label></td>
+                <td>
+                <select id="shape">
+                    <option value="rectangle">Rectangle</option>
+                    <option value="circle">Circle</option>
+                </select>
+                </td>
+            </tr>
+
+            <tbody id="rectangle-shape">
+            <tr>
+                <td><input type="radio" value="metric" name="units"></td>
+                <td><label for="units">Metric</label></td>  
+            </tr>
+            <tr>
+                <td><input type="radio" value="imperial" name="units"></td>
+                <td><label for="units">Imperial</label></td>  
+            </tr>
+            <tr>
+                <td><label for="round_check">Round to whole number</label></td>
+                <td><input type="checkbox" id="round_check"></td>
+            </tr>
+            <tr>
+                <td><label for="width">Width</label></td>
+                <td><input type="text" id="width"></td>
+            </tr>
+            <tr>
+                <td><label for="length">Length</label></td>
+                <td><input type="text" id="length"></td>
+            </tr>
+            <tr>
+                <td><label for="area">Area</label></td>
+                <td><input type="text" id="area"></td>
+            </tr>
+            </tbody>
+            <tbody id="circle-shape" hidden>
+                <tr><td>Radius</td>
+                    <td>Blah</td>
+                </tr>
+            </tbody>
+            <tr>
+                <td><input type="button" id="calcbutton" value="Calculate" onclick="calculate()"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+            </table>
+        </form>
     </body>
 </html>
